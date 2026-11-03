@@ -1,13 +1,19 @@
 function About() {
-    const skills = "HTML, CSS, JavaScript and React";
+    const skills = ["HTML", "CSS", "JavaScript", "React"];
 
     return (
         <section id="about" className="about">
             <h2>About Me</h2>
 
             <p>
-                I'm an aspiring front-end developer who enjoys
-                building websites and learning new technologies.
+                I'm a front-end developer who enjoys learning new 
+                technologies and building websites from scratch.
+                I've been developing my skills in HTML, CSS, 
+                JavaScript and React through hands-on projects.
+
+                I enjoy solving problems, experimenting with
+                different designs and creating websites that
+                are both functional and easy to use.
             </p>
 
             <p>
@@ -16,7 +22,13 @@ function About() {
             </p>
 
             <p>
-                My current skiils include {skills}.
+            <div className="skills-list">
+                {skills.map((skill) => (
+                    <span key={skill} className="skill-badge">
+                        {skill}
+                    </span>
+                ))}
+            </div>
             </p>
         </section>
     )
